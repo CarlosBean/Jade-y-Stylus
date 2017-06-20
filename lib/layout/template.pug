@@ -1,3 +1,16 @@
 section(class="Layout")
-  div(class="Layout-battle")
-    include ../battle/template.pug
+  section(class="Layout-antagonist")
+    each card in [1,2,3,4,5]
+      include ../card/template.pug
+  section(class="Layout-main")
+    div(class="Layout-status")
+      each name in [["Natalia",10000],["Fabian",20000]]
+        include ../status/template.pug
+    div(class="Layout-battle")
+      include ../battle/template.pug
+    div(class="Layout-phases")
+      - text ="OMG, ese ataque fue devastador, le quitaste 300 puntos."
+      include ../phases/template.pug
+  section(class="Layout-player")
+    each card in [1,2,3,4,5]
+      include ../card/template.pug
